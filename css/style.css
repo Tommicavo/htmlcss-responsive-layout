@@ -8,6 +8,7 @@
 /* Utils */
 .flex{
     display: flex;
+    flex-wrap: wrap;
 }
 
 .container{
@@ -55,7 +56,7 @@ header .container{
 }
 
 /* Introduction */
-.row{
+.row, .double .card{
     flex-wrap: wrap;
 }
 
@@ -69,13 +70,19 @@ header .container{
     border: 1px dashed black;
 }
 
+.double_card, .profile{
+    flex-basis: 100%;
+}
+
 /* Media query*/
 /* Tablet */
 @media screen and (min-width: 426px){
+    /* Generics */
     .container{
         max-width: 768px;
     }
 
+    /* Introduction */
     .intro .col{
         flex-basis: calc(100% / 3);
     }
@@ -84,14 +91,25 @@ header .container{
         flex-basis: calc((100% / 3) * 2);
     }
 
+    /* Testimonial */
+    .profile.photo{
+        flex-basis: calc(100% / 3);
+    }
+
+    .profile.quote{
+        flex-basis: calc((100% / 3) * 2);
+    }
+
 }
 
 /* Laptop */
 @media screen and (min-width: 769px) {
+    /* Generics */
     .container{
         max-width: 1024px;
     }
 
+    /* Header */
     .header_right_mobile{
         display: none;
     }
@@ -100,7 +118,22 @@ header .container{
         display: block;
     }
 
+    /* Introduction */
+    .double_card{
+        flex-basis: 50%;
+    }
+
+    /* Planning */
     .planning .col{
         flex-basis: 50%;
+    }
+
+    /* Testimonial */
+    .profile.photo{
+        flex-basis: 20%;
+    }
+
+    .profile.quote{
+        flex-basis: 80%;
     }
 }
