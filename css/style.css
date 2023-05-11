@@ -16,6 +16,11 @@
 }
 
 /* Generics */
+body{
+    font-family: 'Fredoka', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+}
+
 header{
     padding: 1rem;
     height: 80px;
@@ -32,22 +37,53 @@ header{
     color: white;
 }
 
-body{
-    font-family: 'Fredoka', sans-serif;
-    font-family: 'Open Sans', sans-serif;
+main{
+    margin-top: 80px;
+}
+
+section{
+    padding: 2rem 0;
 }
 
 /* Header */
 header .container{
     justify-content: space-between;
-    align-items: center;
 }
 
 .header_right_laptop{
     display: none;
 }
 
+/* Introduction */
+.row{
+    flex-wrap: wrap;
+}
+
+.col{
+    flex-basis: 100%;
+    padding: 1rem;
+    border: 1px dashed black;
+}
+
+.card{
+    border: 1px dashed black;
+}
+
 /* Media query*/
+@media screen and (min-width: 426px){
+    .container{
+        max-width: 768px;
+    }
+
+    .col{
+        flex-basis: calc(100% / 3);
+    }
+
+    .col.double{
+        flex-basis: calc((100% / 3) * 2);
+    }
+}
+
 @media screen and (min-width: 769px) {
     .container{
         max-width: 1024px;
