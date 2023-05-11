@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+:root {
+    --lilla: #9792E4;
+  }
+
 /* Utils */
 .flex{
     display: flex;
@@ -37,7 +41,7 @@ header{
 
     font-size: 24px;
     font-weight: 700;
-    background-color: blue;
+    background-color: #0084FD;
     color: white;
 }
 
@@ -47,10 +51,6 @@ main{
 
 section{
     padding: 2rem 0;
-}
-
-h3{
-    padding: 1rem;
 }
 
 ul{
@@ -90,31 +90,136 @@ header .container{
 }
 
 /* Introduction */
-.row, .double .card{
-    flex-wrap: wrap;
+.intro .row{
+    text-align: center;
+    align-items: stretch;
+    height: 100%;
 }
 
 .col{
     flex-basis: 100%;
     padding: 1rem;
-    border: 1px dashed black;
 }
 
-.card{
-    border: 1px dashed black;
+.intro .card{
+    padding: 2rem;
+    height: 100%;
+    border-radius: 20px;
+    background-color: #B5DDFF;
 }
 
-.double_card, .profile{
+.double .card{
+    flex-basis: 100%;
+    padding-bottom: 0;
+    text-align: left;
+    align-items: stretch;
+    height: 100%;
+}
+
+.profile{
     flex-basis: 100%;
 }
 
-/* Footer */
+.intro_icon{
+    font-size: 100px;
+    color: #0084FD;
+}
 
+.intro_title{
+    padding: 2rem 0;
+    color: #0084FD;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.double_card .intro_lorem{
+    padding-bottom: 2rem;
+}
+
+.intro_lorem{
+    font-size: 16px;
+    font-weight: 500;
+    color: gray;
+}
+
+.intro img{
+    width: 250px;
+    height: auto;
+    padding-top: 2rem;
+    display: block;
+}
+
+.app_store span{
+    font-size: 16px;
+}
+
+/* Planning */
+.card.big{
+    background-color: var(--lilla);
+    color: white;
+    padding: 2rem;
+}
+
+.card.small{
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.plan_img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.planning img{
+    width: 80%;
+    height: auto;
+}
+
+.big .plan_title{
+    font-size: 24px;
+    font-weight: 700;
+    padding: 2rem 0;
+}
+
+.big .plan_lorem{
+    font-size: 12px;
+}
+
+.small .plan_title{
+    font-size: 18px;
+    font-weight: 700;
+    padding: 1rem 0;
+}
+
+.small .plan_lorem{
+    font-size: 12px;
+    font-style: italic;
+}
+
+.plan_arrow{
+    width: 36px;
+    height: 36px;
+    display: inline-block;
+    background-color: var(--lilla);
+    border-radius: 50%;
+    font-size: 22px;
+    line-height: 36px;
+    margin: 2rem 0;
+}
+
+.plan_arrow a{
+    color: black;
+}
 
 /* Buttons */
 .btn{
     border-radius: 15px;
-    padding: 5px 10px;
+    padding: 5px 25px;
+    text-decoration: none;
 }
 
 .btn.start{
@@ -122,13 +227,23 @@ header .container{
     color: black;
 }
 
+.btn.app_store{
+    background-color: #0084FD;
+    color: white;
+}
+
+/* Font Awesome */
+.fa-apple{
+    font-size: 16px;
+}
+
 /* Colors */
-.bg_white{
+.white{
     background-color: white;
 }
 
-.bg_lilla{
-    background-color: lightcoral;
+.lilla{
+    background-color: var(--lilla);
 }
 
 /* Media query*/
@@ -144,12 +259,12 @@ header .container{
     }
 
     /* Introduction */
-    .intro .col{
-        flex-basis: calc(100% / 3);
-    }
-
     .intro .col.double{
         flex-basis: calc((100% / 3) * 2);
+    }
+
+    .intro .col{
+        flex-basis: calc(100% / 3);
     }
 
     /* Testimonial */
@@ -174,7 +289,6 @@ header .container{
     .col.about_img{
         flex-basis: 40%;
     }
-
 }
 
 /* Laptop */
