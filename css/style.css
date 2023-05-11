@@ -23,9 +23,12 @@ body{
 }
 
 header{
-    padding: 1rem;
+    padding: 0 1rem;
     height: 80px;
     
+    display: flex;
+    align-items: center;
+
     position:fixed;
     left: 0;
     top: 0;
@@ -50,6 +53,27 @@ h3{
     padding: 1rem;
 }
 
+ul{
+    display: flex;
+}
+
+li{
+    list-style-type: none;
+    padding: 0 10px;
+}
+
+header a{
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+footer{
+    background-color: black;
+    color: white;
+}
+
 /* Header */
 header .container{
     justify-content: space-between;
@@ -57,6 +81,12 @@ header .container{
 
 .header_right_laptop{
     display: none;
+}
+
+.logo img{
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 /* Introduction */
@@ -76,6 +106,29 @@ header .container{
 
 .double_card, .profile{
     flex-basis: 100%;
+}
+
+/* Footer */
+
+
+/* Buttons */
+.btn{
+    border-radius: 15px;
+    padding: 5px 10px;
+}
+
+.btn.start{
+    background-color: white;
+    color: black;
+}
+
+/* Colors */
+.bg_white{
+    background-color: white;
+}
+
+.bg_lilla{
+    background-color: lightcoral;
 }
 
 /* Media query*/
