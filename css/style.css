@@ -70,20 +70,23 @@ header .container{
 }
 
 /* Media query*/
+/* Tablet */
 @media screen and (min-width: 426px){
     .container{
         max-width: 768px;
     }
 
-    .col{
+    .intro .col{
         flex-basis: calc(100% / 3);
     }
 
-    .col.double{
+    .intro .col.double{
         flex-basis: calc((100% / 3) * 2);
     }
+
 }
 
+/* Laptop */
 @media screen and (min-width: 769px) {
     .container{
         max-width: 1024px;
@@ -95,5 +98,9 @@ header .container{
 
     .header_right_laptop{
         display: block;
+    }
+
+    .planning .col{
+        flex-basis: 50%;
     }
 }
